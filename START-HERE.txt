@@ -1,0 +1,19 @@
+ICONIQ ALPHA iOS source handoff — 4 November 2026
+
+This is source code, not a signed IPA, archive or approved application.
+Read docs/store-readiness/APPLE-APP-STORE.md and NATIVE-PUSH.md first.
+
+On a Mac with supported Xcode and Node 22+:
+  npm ci
+  npm run build:native
+  npm exec -w portal -- cap sync ios
+  npm run native:ios -w portal
+
+Use your own Apple Developer team and registered com.iconiq.alpha bundle ID.
+Configure APNs privately, test on iPhone/iPad and validate the signed archive.
+The backend needs your existing protected production environment and database;
+no deployed credentials, database, APNs key or signing key is included.
+The hosted app continues to load https://alpha.iconiqprime.com.
+The independent local learning kit is bundled in the native project.
+Store screenshot designs are browser drafts; verify against the signed app.
+release:check intentionally reports remaining owner/device gates as incomplete.
